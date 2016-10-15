@@ -1,0 +1,138 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From WelcomeActivity:
+* .gitignore
+* debug.keystore
+* ic_launcher-web.png
+* test.txt
+From library:
+* LICENSE
+* pom.xml
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.+
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In library:
+* AndroidManifest.xml => library\src\main\AndroidManifest.xml
+* assets\ => library\src\main\assets
+* res\ => library\src\main\res\
+* src\ => library\src\main\java\
+In WelcomeActivity:
+* AndroidManifest.xml => welcomeActivity\src\main\AndroidManifest.xml
+* assets\ => welcomeActivity\src\main\assets\
+* libs\alipaySdk-20160516.jar => welcomeActivity\libs\alipaySdk-20160516.jar
+* libs\AMap_Location_V2.7.0_20160726.jar => welcomeActivity\libs\AMap_Location_V2.7.0_20160726.jar
+* libs\arm64-v8a\libeasemob_jni.so => welcomeActivity\src\main\jniLibs\arm64-v8a\libeasemob_jni.so
+* libs\arm64-v8a\libeasemobservice.so => welcomeActivity\src\main\jniLibs\arm64-v8a\libeasemobservice.so
+* libs\arm64-v8a\libentryexpro.so => welcomeActivity\src\main\jniLibs\arm64-v8a\libentryexpro.so
+* libs\arm64-v8a\libjpush217.so => welcomeActivity\src\main\jniLibs\arm64-v8a\libjpush217.so
+* libs\arm64-v8a\libuptsmaddon.so => welcomeActivity\src\main\jniLibs\arm64-v8a\libuptsmaddon.so
+* libs\arm64-v8a\libweibosdkcore.so => welcomeActivity\src\main\jniLibs\arm64-v8a\libweibosdkcore.so
+* libs\armeabi-v7a\libentryexpro.so => welcomeActivity\src\main\jniLibs\armeabi-v7a\libentryexpro.so
+* libs\armeabi-v7a\libjpush217.so => welcomeActivity\src\main\jniLibs\armeabi-v7a\libjpush217.so
+* libs\armeabi-v7a\libuptsmaddon.so => welcomeActivity\src\main\jniLibs\armeabi-v7a\libuptsmaddon.so
+* libs\armeabi-v7a\libwebpbackport.so => welcomeActivity\src\main\jniLibs\armeabi-v7a\libwebpbackport.so
+* libs\armeabi-v7a\libweibosdkcore.so => welcomeActivity\src\main\jniLibs\armeabi-v7a\libweibosdkcore.so
+* libs\armeabi\libeasemob_jni.so => welcomeActivity\src\main\jniLibs\armeabi\libeasemob_jni.so
+* libs\armeabi\libeasemobservice.so => welcomeActivity\src\main\jniLibs\armeabi\libeasemobservice.so
+* libs\armeabi\libentryexpro.so => welcomeActivity\src\main\jniLibs\armeabi\libentryexpro.so
+* libs\armeabi\libjpush217.so => welcomeActivity\src\main\jniLibs\armeabi\libjpush217.so
+* libs\armeabi\libuptsmaddon.so => welcomeActivity\src\main\jniLibs\armeabi\libuptsmaddon.so
+* libs\armeabi\libwebpbackport.so => welcomeActivity\src\main\jniLibs\armeabi\libwebpbackport.so
+* libs\armeabi\libweibosdkcore.so => welcomeActivity\src\main\jniLibs\armeabi\libweibosdkcore.so
+* libs\core-3.0.0.jar => welcomeActivity\libs\core-3.0.0.jar
+* libs\easemobchat_2.3.0.jar => welcomeActivity\libs\easemobchat_2.3.0.jar
+* libs\fastjson-1.1.22.jar => welcomeActivity\libs\fastjson-1.1.22.jar
+* libs\google-play-services.jar => welcomeActivity\libs\google-play-services.jar
+* libs\jpush-android-2.1.7.jar => welcomeActivity\libs\jpush-android-2.1.7.jar
+* libs\libammsdk.jar => welcomeActivity\libs\libammsdk.jar
+* libs\locSDK_3.3.jar => welcomeActivity\libs\locSDK_3.3.jar
+* libs\mips64\libjpush217.so => welcomeActivity\src\main\jniLibs\mips64\libjpush217.so
+* libs\mips64\libweibosdkcore.so => welcomeActivity\src\main\jniLibs\mips64\libweibosdkcore.so
+* libs\mips\libentryexpro.so => welcomeActivity\src\main\jniLibs\mips\libentryexpro.so
+* libs\mips\libjpush217.so => welcomeActivity\src\main\jniLibs\mips\libjpush217.so
+* libs\mips\libweibosdkcore.so => welcomeActivity\src\main\jniLibs\mips\libweibosdkcore.so
+* libs\mta-sdk-1.6.2.jar => welcomeActivity\libs\mta-sdk-1.6.2.jar
+* libs\multiwindow-v1.2.6.jar => welcomeActivity\libs\multiwindow-v1.2.6.jar
+* libs\nineoldandroids-2.4.0.jar => welcomeActivity\libs\nineoldandroids-2.4.0.jar
+* libs\open_sdk_r5509.jar => welcomeActivity\libs\open_sdk_r5509.jar
+* libs\picasso-2.4.0.jar => welcomeActivity\libs\picasso-2.4.0.jar
+* libs\sdk-v1.0.0.jar => welcomeActivity\libs\sdk-v1.0.0.jar
+* libs\umeng-analytics-v5.5.3.jar => welcomeActivity\libs\umeng-analytics-v5.5.3.jar
+* libs\universal-image-loader-1.9.2.jar => welcomeActivity\libs\universal-image-loader-1.9.2.jar
+* libs\weibosdkcore_release.jar => welcomeActivity\libs\weibosdkcore_release.jar
+* libs\x86\libeasemob_jni.so => welcomeActivity\src\main\jniLibs\x86\libeasemob_jni.so
+* libs\x86\libeasemobservice.so => welcomeActivity\src\main\jniLibs\x86\libeasemobservice.so
+* libs\x86\libentryexpro.so => welcomeActivity\src\main\jniLibs\x86\libentryexpro.so
+* libs\x86\libjpush217.so => welcomeActivity\src\main\jniLibs\x86\libjpush217.so
+* libs\x86\libuptsmaddon.so => welcomeActivity\src\main\jniLibs\x86\libuptsmaddon.so
+* libs\x86\libwebpbackport.so => welcomeActivity\src\main\jniLibs\x86\libwebpbackport.so
+* libs\x86\libweibosdkcore.so => welcomeActivity\src\main\jniLibs\x86\libweibosdkcore.so
+* libs\x86_64\libeasemobservice.so => welcomeActivity\src\main\jniLibs\x86_64\libeasemobservice.so
+* libs\x86_64\libentryexpro.so => welcomeActivity\src\main\jniLibs\x86_64\libentryexpro.so
+* libs\x86_64\libjpush217.so => welcomeActivity\src\main\jniLibs\x86_64\libjpush217.so
+* libs\x86_64\libuptsmaddon.so => welcomeActivity\src\main\jniLibs\x86_64\libuptsmaddon.so
+* libs\x86_64\libweibosdkcore.so => welcomeActivity\src\main\jniLibs\x86_64\libweibosdkcore.so
+* libs\xUtils-3.3.16.jar => welcomeActivity\libs\xUtils-3.3.16.jar
+* lint.xml => welcomeActivity\lint.xml
+* res\ => welcomeActivity\src\main\res\
+* src\ => welcomeActivity\src\main\java\
+
+Missing Android Support Repository:
+-----------------------------------
+Some useful libraries, such as the Android Support Library, are
+installed from a special Maven repository, which should be installed
+via the SDK manager.
+
+It looks like this library is missing from your SDK installation at:
+null
+
+To install it, open the SDK manager, and in the Extras category,
+select "Android Support Repository". You may also want to install the
+"Google Repository" if you want to use libraries like Google Play
+Services.
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
